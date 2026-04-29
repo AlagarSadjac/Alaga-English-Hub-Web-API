@@ -39,10 +39,10 @@ public class StudentController {
         return studentRepository.save(newStudent);
     }
 
-    @GetMapping("/all")
-    public List<Student> getAllStudents() {
-        return studentRepository.findAll();
-    }
+//    @GetMapping("/all")
+//    public List<Student> getAllStudents() {
+//        return studentRepository.findAll();
+//    }
 
 
 }
