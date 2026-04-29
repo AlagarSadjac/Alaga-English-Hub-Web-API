@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
 @CrossOrigin(origins = "*") // இது மிக முக்கியம்: உங்கள் HTML மற்றும் Spring Boot-ஐ இணைக்க உதவும்
 @RestController
 @RequestMapping("/api/student")
@@ -17,6 +16,7 @@ public class StudentController {
     private StudentRepository studentRepository;
 
     // லாகின் செய்வதற்கான API
+
     @PostMapping("/login")
     public String login(@RequestBody Student loginData) {
         // 1. ஈமெயில் மூலம் மாணவரைத் தேடுதல்
@@ -39,10 +39,10 @@ public class StudentController {
         return studentRepository.save(newStudent);
     }
 
-//    @GetMapping("/all")
-//    public List<Student> getAllStudents() {
-//        return studentRepository.findAll();
-//    }
+    @GetMapping("/all")
+    public List<Student> getAllStudents() {
+        return studentRepository.findAll();
+    }
 
 
 }
