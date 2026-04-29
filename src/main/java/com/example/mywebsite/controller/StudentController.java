@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
+@CrossOrigin(origins = "*") // இது மிக முக்கியம்: உங்கள் HTML மற்றும் Spring Boot-ஐ இணைக்க உதவும்
 @RestController
 @RequestMapping("/api/student")
-@CrossOrigin(origins = "*") // இது மிக முக்கியம்: உங்கள் HTML மற்றும் Spring Boot-ஐ இணைக்க உதவும்
 public class StudentController {
 
     @Autowired
