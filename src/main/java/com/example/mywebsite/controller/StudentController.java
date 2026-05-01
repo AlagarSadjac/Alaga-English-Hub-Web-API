@@ -2,6 +2,7 @@ package com.example.mywebsite.controller;
 
 import com.example.mywebsite.model.Student;
 import com.example.mywebsite.repository.StudentRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,10 +39,10 @@ public class StudentController {
         return studentRepository.save(newStudent);
     }
 
-//    @GetMapping("/all")
-//    public List<Student> getAllStudents() {
-//        return studentRepository.findAll();
-//    }
+    @GetMapping("/all")
+    public List<Student> getAllStudents() {
+        return studentRepository.findAll();
+    }
 
 
 }
